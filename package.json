@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "puppeteer": "^8.0.0"
+  },
+  "scripts": {
+    "test": "npm run single",
+    "single": "node navigation.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
