@@ -9,9 +9,9 @@ let browser, page;
     "LT:Options": {
       "platform": "Windows 10",
       "build": "Puppeteer SmartUI Build",
-      "name": process.env.LT_USERNAME || '<your username>',
-      "user": process.env.LT_ACCESS_KEY || '<your access key>',
-      "accessKey": "mtPSfImA94UZNUj92fOctXE1VrKR4uDAoYrVU1kKJlqzclR6xU",
+      "name": "Puppeteer SmartUI Test",
+      "user": process.env.LT_USERNAME || '<your username>',
+      "accessKey": process.env.LT_ACCESS_KEY || '<your access key>',
       "network": true,
       "video": true,
       "console": true,
