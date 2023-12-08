@@ -4,8 +4,8 @@
     "puppeteer": "^8.0.0"
   },
   "scripts": {
-    "test": "npm run single",
-    "single": "samplePuppeteer.js"
+  "scripts": {
+    "smartUI": "node samplePuppeteer.js"
   },
   "dependencies": {
     "axios": "^0.21.1"
