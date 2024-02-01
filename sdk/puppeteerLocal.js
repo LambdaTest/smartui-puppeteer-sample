@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver'); // Assuming you still want to use smartuiSnapshot locally
+const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver'); 
 
 (async () => {
   // Launch a browser instance locally
