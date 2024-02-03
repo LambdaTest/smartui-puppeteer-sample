@@ -1,105 +1,113 @@
-# LambdaTest SmartUI Puppeteer Samples for SDK & Lambdatest Hooks
+# LambdaTest SmartUI: Puppeteer Samples with SDK & LambdaTest Hooks
 
-This project demonstrates how to use Puppeteer and LambdaTest together to run automated tests on the LambdaTest platform.
+Welcome to the LambdaTest SmartUI Puppeteer samples repository. This guide provides detailed instructions on integrating Puppeteer with LambdaTest for automated, cloud-based testing, including visual regression testing using SmartUI. Discover how to leverage the power of Puppeteer alongside LambdaTest's extensive testing capabilities to ensure your web applications look and perform their best across a wide range of devices and browsers.
 
-## Setup
+## Getting Started
 
-First, clone this repository to your local machine.
+### Prerequisites
+
+Before you begin, ensure you have the following:
+- An active LambdaTest account. [Sign up here](https://www.lambdatest.com/) if you don't have one.
+- Your LambdaTest Username and Access Key, available in your LambdaTest profile.
+
+### Initial Setup
+
+Clone this repository to get started with SmartUI tests using Puppeteer:
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-puppeteer-sample.git
 cd smartui-puppeteer-sample
 ```
 
-You'll need to set your LambdaTest username and access key as environment variables. They can be found on your LambdaTest profile.
+Configure your environment with your LambdaTest credentials:
 
 ```bash
 export LT_USERNAME="Your LambdaTest Username"
 export LT_ACCESS_KEY="Your LambdaTest Access Key"
 ```
 
-## Sample with Lambdatest SDK:
+## Testing with LambdaTest SDK
 
-### About the Test
+### Overview
 
-The test navigates to the LambdaTest homepage and checks the page title. After the title check, it will take a full-page screenshot for visual regression testing.
+Our sample tests demonstrate navigating to the LambdaTest homepage to verify the page title and conducting a full-page screenshot for visual regression testing.
 
-#### Setting up your environment
+#### Setup
 
-You can find the samples for `Lambdatest SDK` in the `sdk` folder: 
+Navigate to the SDK sample directory and install dependencies:
+
 ```bash
 cd sdk
+npm install
 ```
 
-### About SmartUI Webhook
+#### Using SmartUI with Puppeteer
 
-LambdaTest's SmartUI uses a SDK function to call the `smartuiSnapshot` function. This function captures a screenshot of the full page and uses it for visual regression testing. 
+LambdaTest's SmartUI SDK enhances your testing with automated visual regression capabilities. Here's how to capture a full-page screenshot:
 
 ```javascript
-const {smartuiSnapshot} = require('@lambdatest/puppeteer-driver');
-```
-Here's an example of how to use the `smartuiSnapshot` function:
+const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver');
 
-```javascript
-await smartuiSnapshot(page, "<Your Screenshot Name>");
+await smartuiSnapshot(page, "Your_Screenshot_Name");
 ```
 
-Replace `<Your Screenshot Name>` with a relevant name for the screenshot. The screenshot will be saved with this name in the LambdaTest platform, and you can use it for comparing the UI changes over time.
+Replace `"Your_Screenshot_Name"` with a meaningful identifier. Screenshots are stored in LambdaTest for seamless UI comparison over time.
 
-### Running tests
-You, can run the execution on your `local` machines or `Lambdatest Automation` grid, you can select the samples as per below: 
+### Execution
 
-For local execution: 
-```bash
-npm run smartui-local
-```
+Execute tests locally or on the LambdaTest Automation Cloud grid:
 
-For `Lambdatest Automation Cloud` grid: 
-```bash
-npm run smartui-cloud
-```
-For more information about the `SDK` features and help, please visit the our docs at [https://staging.lambdatestinternal.com/support/docs/smartui-playwright-sdk/](https://staging.lambdatestinternal.com/support/docs/smartui-playwright-sdk/)
+- For local execution:
+  ```bash
+  npm run smartui-local
+  ```
 
-## Sample with Lambdatest Hooks:
+- For execution on LambdaTest Automation Cloud:
+  ```bash
+  npm run smartui-cloud
+  ```
 
-### About the Test
+Visit our [documentation](https://www.lambdatest.com/support/docs/smartui-puppeteer-sdk/) for comprehensive SDK guides and tutorials.
 
-The test navigates to the LambdaTest homepage and checks the page title. After the title check, it will take a full-page screenshot for visual regression testing.
+## Testing with LambdaTest Hooks
 
-#### Setting up your environment
+### Overview
 
-You can find the samples for `Lambdatest Hooks` in the `hooks` folder: 
+Like the SDK samples, these tests navigate to the LambdaTest homepage for title verification and visual regression via screenshot.
+
+#### Setup
+
+Access the Hooks sample directory and prepare your environment:
+
 ```bash
 cd hooks
-```
-Next, install the necessary dependencies:
-
-```bash
-npm i
+npm install
 ```
 
-### About SmartUI Webhook
+#### Leveraging SmartUI Webhooks
 
-LambdaTest's SmartUI uses a webhook to call the `smartui.takeScreenshot` function. This function captures a screenshot of the full page and uses it for visual regression testing. The function is called using the `page.evaluate` method with the `lambdatest_action` parameter.
-
-Here's an example of how to use the `smartui.takeScreenshot` function:
+Use LambdaTest's webhook for seamless visual regression testing. Capture a screenshot with:
 
 ```javascript
-await page.evaluate((_) => {},
-    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: true, screenshotName: '<Your_Screenshot_Name>' }
-    })}`)
+await page.evaluate(() => {
+  // Replace "Your_Screenshot_Name" with the screenshot identifier
+  const screenshotName = "Your_Screenshot_Name";
+  const lambdatestAction = JSON.stringify({
+    action: 'smartui.takeScreenshot',
+    arguments: { fullPage: true, screenshotName }
+  });
+  // Execute the SmartUI action
+});
 ```
 
-Replace `<Your Screenshot Name>` with a relevant name for the screenshot. The screenshot will be saved with this name in the LambdaTest platform, and you can use it for comparing the UI changes over time.
+### Running the Tests
 
-### Running Tests
-
-You can now run the tests on the `Lambdatest Automation` grid using the following command: 
+Deploy your tests on the LambdaTest Automation grid with:
 
 ```bash
 npm run single
 ```
-## Support
 
-For additional support, please don't hesitate to reach out to our `24/7` support team is happy to help you at [support@example.com](mailto:support@example.com)
+## Support and Assistance
 
+Our dedicated support team is available 24/7 to assist with any questions or challenges you may encounter. Contact us anytime at [support@lambdatest.com](mailto:support@lambdatest.com) for prompt and friendly support.
