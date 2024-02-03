@@ -25,6 +25,23 @@ Configure your environment with your LambdaTest credentials:
 export LT_USERNAME="Your LambdaTest Username"
 export LT_ACCESS_KEY="Your LambdaTest Access Key"
 ```
+### Settings up SmartUI project
+
+You, need to create a `SmartUI` project at [Lambdatest - SmartUI Web App](https://smartui.lambdatest.com/projects). Now, you need to follow the steps below: 
+1. Click on the `New Project` button on the top right of the webpage.
+2. Select your `Platform type` as `SDK` for running `SDK` sample test below, else you can select `Platform type` as `Web` for running `hooks` sample.
+3. Provide name of your choice for the project.
+4. Now, add `Approvers` who are required to review the changes and approve/reject the results of the tests.
+5. (Optional) You can add `tags` of your choice such as `uat`, `dev` etc..
+6. Click on the `Get Started` button for completing the project creation.
+7. Now, select `NodeJS` setup guide and in the `Step 2` you can find the project token.
+
+### Setting up Project token: 
+Once, you have successfully setup the project for the `SmartUI` and copiec the `Project Token` from the `SmartUI Web App`: 
+
+```bash
+export PROJECT_TOKEN="<Your Copied Project Token to be pasted here>" 
+```
 
 ## Testing with LambdaTest SDK
 
