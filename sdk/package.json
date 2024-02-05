@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "smartui-cloud": "npx smartui exec  node puppeteerCloud.js",
+    "smartui-local": "npx smartui exec  node puppeteerLocal.js"
+  },
   "dependencies": {
     "@lambdatest/puppeteer-driver": "^1.0.3",
     "@lambdatest/smartui-cli": "^2.0.6",
