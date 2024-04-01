@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "@lambdatest/puppeteer-driver": "^1.0.3",
-    "@lambdatest/smartui-cli": "^2.0.6",
+    "@lambdatest/smartui-cli": "^3.0.0",
     "chai": "^5.0.3",
     "puppeteer": "^21.10.0"
   }
