@@ -1,14 +1,14 @@
-# LambdaTest SmartUI: Puppeteer Samples with SDK & LambdaTest Hooks
+# TestMu AI SmartUI: Puppeteer Samples with SDK & TestMu AI Hooks — TestMu AI (Formerly LambdaTest)
 
-Welcome to the LambdaTest SmartUI Puppeteer samples repository. This guide provides detailed instructions on integrating Puppeteer with LambdaTest for automated, cloud-based testing, including visual regression testing using SmartUI. Discover how to leverage the power of Puppeteer alongside LambdaTest's extensive testing capabilities to ensure your web applications look and perform their best across a wide range of devices and browsers.
+Welcome to the TestMu AI SmartUI Puppeteer samples repository. This guide provides detailed instructions on integrating Puppeteer with TestMu AI for automated, cloud-based testing, including visual regression testing using SmartUI. Discover how to leverage the power of Puppeteer alongside TestMu AI's extensive testing capabilities to ensure your web applications look and perform their best across a wide range of devices and browsers.
 
 ## Getting Started
 
 ### Prerequisites
 
 Before you begin, ensure you have the following:
-- An active LambdaTest account. [Sign up here](https://www.lambdatest.com/) if you don't have one.
-- Your LambdaTest Username and Access Key, available in your LambdaTest profile.
+- An active TestMu AI account. [Sign up here](https://www.testmuai.com/) if you don't have one.
+- Your TestMu AI Username and Access Key, available in your TestMu AI profile.
 
 ### Initial Setup
 
@@ -19,7 +19,7 @@ git clone https://github.com/LambdaTest/smartui-puppeteer-sample.git
 cd smartui-puppeteer-sample
 ```
 
-Configure your environment with your LambdaTest credentials:
+Configure your environment with your TestMu AI credentials:
 
 ```bash
 export LT_USERNAME="Your LambdaTest Username"
@@ -27,7 +27,7 @@ export LT_ACCESS_KEY="Your LambdaTest Access Key"
 ```
 ### Settings up SmartUI project
 
-You, need to create a `SmartUI` project at [Lambdatest - SmartUI Web App](https://smartui.lambdatest.com/projects). Now, you need to follow the steps below: 
+You, need to create a `SmartUI` project at [TestMu AI - SmartUI Web App](https://smartui.lambdatest.com/projects). Now, you need to follow the steps below: 
 1. Click on the `New Project` button on the top right of the webpage.
 2. Select your `Platform type` as `SDK` for running `SDK` sample test below, else you can select `Platform type` as `Web` for running `hooks` sample.
 3. Provide name of your choice for the project.
@@ -43,11 +43,11 @@ Once, you have successfully setup the project for the `SmartUI` and copiec the `
 export PROJECT_TOKEN="<Your Copied Project Token to be pasted here>" 
 ```
 
-## Testing with LambdaTest SDK
+## Testing with TestMu AI SDK
 
 ### Overview
 
-Our sample tests demonstrate navigating to the LambdaTest homepage to verify the page title and conducting a full-page screenshot for visual regression testing.
+Our sample tests demonstrate navigating to the TestMu AI homepage to verify the page title and conducting a full-page screenshot for visual regression testing.
 
 #### Setup
 
@@ -60,7 +60,7 @@ npm install
 
 #### Using SmartUI with Puppeteer
 
-LambdaTest's SmartUI SDK enhances your testing with automated visual regression capabilities. Here's how to capture a full-page screenshot:
+TestMu AI's SmartUI SDK enhances your testing with automated visual regression capabilities. Here's how to capture a full-page screenshot:
 
 ```javascript
 const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver');
@@ -68,29 +68,29 @@ const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver');
 await smartuiSnapshot(page, "Your_Screenshot_Name");
 ```
 
-Replace `"Your_Screenshot_Name"` with a meaningful identifier. Screenshots are stored in LambdaTest for seamless UI comparison over time.
+Replace `"Your_Screenshot_Name"` with a meaningful identifier. Screenshots are stored in TestMu AI for seamless UI comparison over time.
 
 ### Execution
 
-Execute tests locally or on the LambdaTest Automation Cloud grid:
+Execute tests locally or on the TestMu AI Automation Cloud grid:
 
 - For local execution:
   ```bash
   npm run smartui-local
   ```
 
-- For execution on LambdaTest Automation Cloud:
+- For execution on TestMu AI Automation Cloud:
   ```bash
   npm run smartui-cloud
   ```
 
-Visit our [documentation](https://www.lambdatest.com/support/docs/smartui-puppeteer-sdk/) for comprehensive SDK guides and tutorials.
+Visit our [documentation](https://www.testmuai.com/support/docs/smartui-puppeteer-sdk/) for comprehensive SDK guides and tutorials.
 
-## Testing with LambdaTest Hooks
+## Testing with TestMu AI Hooks
 
 ### Overview
 
-Like the SDK samples, these tests navigate to the LambdaTest homepage for title verification and visual regression via screenshot.
+Like the SDK samples, these tests navigate to the TestMu AI homepage for title verification and visual regression via screenshot.
 
 #### Setup
 
@@ -103,7 +103,7 @@ npm install
 
 #### Leveraging SmartUI Webhooks
 
-Use LambdaTest's webhook for seamless visual regression testing. Capture a screenshot with:
+Use TestMu AI's webhook for seamless visual regression testing. Capture a screenshot with:
 
 ```javascript
 await page.evaluate(() => {
@@ -119,7 +119,7 @@ await page.evaluate(() => {
 
 ### Running the Tests
 
-Deploy your tests on the LambdaTest Automation grid with:
+Deploy your tests on the TestMu AI Automation grid with:
 
 ```bash
 npm run single
@@ -127,4 +127,23 @@ npm run single
 
 ## Support and Assistance
 
-Our dedicated support team is available 24/7 to assist with any questions or challenges you may encounter. Contact us anytime at [support@lambdatest.com](mailto:support@lambdatest.com) for prompt and friendly support.
+Our dedicated support team is available 24/7 to assist with any questions or challenges you may encounter. Contact us anytime at [support@testmuai.com](mailto:support@testmuai.com) for prompt and friendly support.
+
+## 🚀 [LambdaTest is Now TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/)
+
+👋 Welcome to TestMu AI, the next evolution of LambdaTest. As of January 2026, LambdaTest has officially rebranded to TestMu AI. We have evolved from a cross-browser testing cloud into a unified, AI-native quality engineering platform designed for the modern DevOps era.
+
+Whether you have been part of the LambdaTest community for years or are just discovering TestMu AI, our mission remains the same: to help you ship faster with high-scale test execution, autonomous testing, and deep quality analytics.
+
+**🔄 Our Rebrand Journey**
+
+We chose the name TestMu AI to reflect our shift towards intelligent, autonomous testing. While our identity has changed, our core technology and commitment to the testing community stay the same.
+
+**✨ Specialties**
+
+- 🤖 AI-Native Test Execution (Formerly LambdaTest)
+- ⚡ Autonomous Test Automation
+- 🌐 Cross-Browser & Mobile Testing
+- 📊 Unified Quality Intelligence
+
+👉 Find [LambdaTest's New Home](https://www.testmuai.com/).
